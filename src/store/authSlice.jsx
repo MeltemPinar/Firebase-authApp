@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialstate = {
+const initialState = {
   user: JSON.parse(localStorage.getItem("user")) ?? false,
 };
 const authSlice = createSlice({
   name: "auth",
-  initialstate,
+  initialState,
   reducers: {
     login: (state, action) => {
       localStorage.setItem("user", JSON.stringify(action.payload));
